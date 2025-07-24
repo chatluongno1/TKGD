@@ -19,17 +19,17 @@
 .vscode
 images
 lap\home
-├── bosanphammoi.html
-├── chitiet.html
-├── dangky.html
-├── dangnhap.html
-├── giohang.html
-├── home.html
-├── lienhe.html
-├── nguoidung.html
-├── sanpham.html
-├── thanhtoan.html
-└── uudai.html
+-├── bosanphammoi.html
+-├── chitiet.html
+-├── dangky.html
+-├── dangnhap.html
+-├── giohang.html
+-├── home.html
+-├── lienhe.html
+-├── nguoidung.html
+-├── sanpham.html
+-├── thanhtoan.html
+-└── uudai.html
 
 ## Tài Liệu Tham Khảo
 - Dựng code  

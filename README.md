@@ -1,55 +1,36 @@
-Trường Đại học Văn Lang - Khoa Công Nghệ Thông Tin
+# Đồ Án Môn Học Thiết Kế Giao Diện Người Dùng
 
-Môn học: Thiết Kế Giao Diện Người Dùng
+**Trường Đại học Văn Lang - Khoa Công Nghệ Thông Tin**  
+**Môn học:** Thiết Kế Giao Diện Người Dùng  
+**Lớp:** 24_7_IT17305B_001  
+**Giảng viên:** ThS. Đặng Đình Hòa  
 
-Lớp: 24_7_IT17305B_001
+## Thành viên
+- PHAN NGUYỄN HUY AN - 2374802010006
+- NGUYỄN THÁI KHÁNH HÒA -  2374802010147
+- NGUYỄN HOÀNG MINH NHẬT - 2374802010363  
 
-Giảng viên: ThS. Đặng Đình Hòa
+## Link Hosting
+- **Netlify:** [Trang chủ](#)  
+- **Github Pages:** [Trang chủ](#)  
 
-Thành viên:
-Trần Vỹ Huy – 237480201192
-
-Nguyễn Trương Đức Huy – 237480201816
-
-Link Hosting:
-Netlify: Trang chủ
-
-Github Pages: Trang chủ
-
-Thư mục:
+## Cấu Trúc Thư Mục
 .vscode
-
 images
-
 lap\home
+├── bosanphammoi.html
+├── chitiet.html
+├── dangky.html
+├── dangnhap.html
+├── giohang.html
+├── home.html
+├── lienhe.html
+├── nguoidung.html
+├── sanpham.html
+├── thanhtoan.html
+└── uudai.html
 
-bosanphammoi.html
-
-chitiet.html
-
-dangky.html
-
-dangnhap.html
-
-giohang.html
-
-home.html
-
-lienhe.html
-
-nguoidung.html
-
-sanpham.html
-
-thanhtoan.html
-
-uudai.html
-
-
-
-Tài Liệu Tham Khảo:
-Dựng code
-
-Wireframe & Figma
-
-Giới thiệu về Hosting
+## Tài Liệu Tham Khảo
+- Dựng code  
+- Wireframe & Figma  
+- Giới thiệu về Hosting

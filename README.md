@@ -2,7 +2,7 @@
 
 **Trường Đại học Văn Lang - Khoa Công Nghệ Thông Tin**  
 **Môn học:** Thiết Kế Giao Diện Người Dùng  
-**Lớp:** 24_7_IT17305B_001  
+**Lớp:** 243_71ITSE30903_0201
 **Giảng viên:** ThS. Đặng Đình Hòa  
 
 ## Thành viên

@@ -12,7 +12,7 @@
 
 ## Link Hosting
 - **Netlify:** [Trang chủ](https://doantkgd.netlify.app/doan/lap/home/home)  
-- **Github Pages:** [Trang chủ]((https://chatluongno1.github.io/TKGD/DOAN/lap/home/home.html))  
+- **Github Pages:** [Trang chủ](https://chatluongno1.github.io/TKGD/DOAN/lap/home/home.html)  
 
 ## Cấu Trúc Thư Mục
 

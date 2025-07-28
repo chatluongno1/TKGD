@@ -11,7 +11,7 @@
 - NGUYỄN HOÀNG MINH NHẬT - 2374802010363  
 
 ## Link Hosting
-- **Netlify:** [Trang chủ] (https://thoitrangxuhuong.netlify.app/doan/lap/home/home) 
+- **Netlify:** [Trang chủ](https://thoitrangxuhuong.netlify.app/doan/lap/home/home) 
 - **Github Pages:** [Trang chủ](https://chatluongno1.github.io/TKGD/DOAN/lap/home/home.html)  
 
 ## Cấu Trúc Thư Mục

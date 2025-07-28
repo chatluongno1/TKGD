@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ưu Đãi Đặc Biệt - Thời trang xu hướng</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow fixed w-full z-50">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+            <a href="../../lap/home/home.html" class="flex items-center gap-2 hover:scale-105 transition">
+                <img src="../../images/v115_2498.jpg" alt="Logo" class="w-12 h-12">
+                <span class="font-semibold text-sm hidden sm:inline">Thời trang xu hướng</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-6">
+                <nav class="flex gap-6 text-sm">
+                    <a href="../../lap/home/home.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Trang chủ</a>
+                    <a href="../../lap/home/sanpham.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Sản phẩm</a>
+                    <a href="../../lap/home/bosanphammoi.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Bộ sưu tập mới</a>
+                    <a href="../../lap/home/uudai.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Ưu đãi</a>
+                    <a href="../../lap/home/lienhe.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Liên hệ</a>
+                    <a href="../../lap/home/giohang.html" class="text-xl transition duration-200 hover:text-black transform hover:scale-110 relative">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                    </a>
+                </nav>
+                <div id="login-section" class="flex gap-2">
+                    <a href="../../lap/home/dangnhap.html" class="text-sm border px-3 py-1 rounded transition duration-200 hover:bg-gray-200">Đăng nhập</a>
+                    <a href="../../lap/home/dangky.html" class="text-sm bg-black text-white px-3 py-1 rounded transition duration-200 transform hover:scale-105 hover:bg-gray-800">Đăng ký</a>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 md:hidden">
+                <a href="../../lap/home/giohang.html" class="text-xl transition duration-200 hover:text-black transform hover:scale-110 relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count-mobile" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                </a>
+                <button id="mobile-menu-btn" class="text-2xl hover:text-gray-600 transition duration-200">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+        
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+            <div class="flex items-center justify-between p-4 border-b">
+                <h3 class="text-lg font-semibold">Menu</h3>
+                <button id="close-menu-btn" class="text-2xl hover:text-gray-600 transition duration-200">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="p-4">
+                <ul class="space-y-4">
+                    <li>
+                        <a href="../../lap/home/home.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+                            <i class="fa-solid fa-home w-5"></i>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../lap/home/sanpham.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+                            <i class="fa-solid fa-shirt w-5"></i>
+                            <span>Sản phẩm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../lap/home/bosanphammoi.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+                            <i class="fa-solid fa-star w-5"></i>
+                            <span>Bộ sưu tập mới</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../lap/home/uudai.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+                            <i class="fa-solid fa-tag w-5"></i>
+                            <span>Ưu đãi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../lap/home/lienhe.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+                            <i class="fa-solid fa-phone w-5"></i>
+                            <span>Liên hệ</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div id="mobile-login-section" class="mt-8 space-y-3">
+                    <a href="../../lap/home/dangnhap.html" class="block text-center py-3 px-4 border rounded-lg hover:bg-gray-100 transition duration-200">
+                        Đăng nhập
+                    </a>
+                    <a href="../../lap/home/dangky.html" class="block text-center py-3 px-4 bg-black text-white rounded-lg hover:bg-gray-800 transition duration-200">
+                        Đăng ký
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-12">
+        <section class="text-center py-12 bg-gray-100">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Ưu Đãi Đặc Biệt Từ Thời Trang Xu Hướng</h1>
+            <p class="mt-2 text-gray-600">Khám phá các sản phẩm đang có giá tốt và áp dụng mã giảm giá ngay!</p>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-4 py-12">
+            <h2 class="text-2xl font-bold text-center mb-8 text-gray-900">Sản Phẩm Đang Giảm Giá</h2>
+            
+            <div id="discountedProductList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            </div>
+
+        
+        </section>
+    </main>
+    
+   <footer class="bg-white border-t mt-12 py-8">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm text-gray-600 items-start">
+    
+    <div class="hidden md:flex flex-row items-center gap-4"> 
+      <a href="#" id="footer-logo" class="block hover:scale-105 transition duration-300">
+        <img src="../../images/v115_2498.jpg" alt="Logo Footer" class="w-8 h-8 rounded-full"> 
+      </a>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-x-twitter fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-linkedin fa-lg"></i></a>
+      </div>
+    </div>
+
+    <div class="flex flex-row items-center pt-1 gap-4 md:hidden"> 
+      <a href="#" id="footer-logo-mobile" class="block hover:scale-105 transition duration-300">
+        <img src="../../images/v115_2498.jpg" alt="Logo Footer Mobile" class="w-8 h-8 rounded-full"> 
+      </a>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-x-twitter fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-linkedin fa-lg"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="text-base font-bold text-black mb-2">Use cases</p>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-black transition duration-200">Thời trang nam</a></li>
+        <li><a href="#" class="hover:text-black transition duration-200">Thời trang nữ</a></li>
+        <li><a href="#" class="hover:text-black transition duration-200">Phụ kiện</a></li>
+        <li><a href="uudai.html" class="hover:text-black transition duration-200">Ưu đãi</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-base font-bold text-black mb-2">Explore</p>
+      <ul class="space-y-1">
+        <li><a href="bosanphammoi.html" class="hover:text-black transition duration-200">Bộ sưu tập mới</a></li>
+        <li><a href="sanpham.html" class="hover:text-black transition duration-200">Sản phẩm bán chạy</a></li>
+        <li><a href="giohang.html" class="hover:text-black transition duration-200">Giỏ hàng</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-base font-bold text-black mb-2">Resources</p>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-black transition duration-200">Chính sách mua hàng</a></li>
+        <li><a href="#" class="hover:text-black transition duration-200">Hỗ trợ khách hàng</a></li>
+        <li><a href="lienhe.html" class="hover:text-black transition duration-200">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-6 text-center text-xs text-gray-400">
+    &copy; 2025 Thời trang xu hướng. All rights reserved.
+  </div>
+</footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+
+            function openMobileMenu() {
+                if (mobileMenu) mobileMenu.classList.remove('translate-x-full');
+                if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent main page from scrolling when menu is open
+            }
+
+            function closeMobileMenu() {
+                if (mobileMenu) mobileMenu.classList.add('translate-x-full');
+                if (mobileMenuOverlay) mobileMenuOverlay.classList.add('hidden');
+                document.body.style.overflow = ''; // Allow scrolling again
+            }
+
+            if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMobileMenu);
+            if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+            if (mobileMenu) {
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', closeMobileMenu);
+                });
+            }
+
+            // --- Logic for login/logout and shopping cart ---
+            const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+            const loginSection = document.getElementById("login-section"); 
+            const mobileLoginSection = document.getElementById("mobile-login-section"); 
+
+            if (loggedInUser && loginSection) {
+                loginSection.innerHTML = `
+                    <div class="text-sm flex items-center gap-3">
+                        <span class="text-gray-700">Xin chào, <strong>${loggedInUser.name}</strong></span>
+                        <button id="logoutBtn" class="text-xs text-red-500 hover:underline">Đăng xuất</button>
+                    </div>
+                `;
+
+                const logoutBtn = document.getElementById("logoutBtn");
+                if (logoutBtn) {
+                    logoutBtn.addEventListener("click", () => {
+                        localStorage.removeItem("loggedInUser");
+                        window.location.reload(); // Reload to update header
+                    });
+                }
+            }
+
+            if (loggedInUser && mobileLoginSection) {
+                mobileLoginSection.innerHTML = `
+                    <div class="mt-8 space-y-3">
+                        <span class="block text-center py-3 px-4 rounded-lg bg-gray-100 text-gray-700">Xin chào, <strong>${loggedInUser.name}</strong></span>
+                        <button id="mobileLogoutBtn" class="block w-full text-center py-3 px-4 bg-black text-white rounded-lg hover:bg-gray-800 transition duration-200">Đăng xuất</button>
+                    </div>
+                `;
+                const mobileLogoutBtn = document.getElementById("mobileLogoutBtn");
+                if (mobileLogoutBtn) {
+                    mobileLogoutBtn.addEventListener("click", () => {
+                        localStorage.removeItem("loggedInUser");
+                        window.location.reload(); 
+                    });
+                }
+            }
+
+            // Update cart count on the icon
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const cartCountElement = document.getElementById('cart-count');
+                const cartCountMobileElement = document.getElementById('cart-count-mobile');
+                
+                if (cart.length > 0) {
+                    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                    if (cartCountElement) { 
+                        cartCountElement.textContent = totalItems;
+                        cartCountElement.classList.remove('hidden');
+                    }
+                    if (cartCountMobileElement) { 
+                        cartCountMobileElement.textContent = totalItems;
+                        cartCountMobileElement.classList.remove('hidden');
+                    }
+                } else {
+                    if (cartCountElement) cartCountElement.classList.add('hidden');
+                    if (cartCountMobileElement) cartCountMobileElement.classList.add('hidden');
+                }
+            }
+            updateCartCount(); 
+
+            // Function to copy code to clipboard (kept in case you add other codes later)
+            function copyCode(elementId, buttonElement) {
+                const codeElement = document.getElementById(elementId);
+                const code = codeElement.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = buttonElement.innerText;
+                    buttonElement.innerText = "Đã sao chép!";
+                    // Optional: temporary feedback color change (less flashy than before)
+                    buttonElement.classList.add('bg-gray-400'); // Neutral grey for copied state
+                    setTimeout(() => {
+                        buttonElement.innerText = originalText;
+                        buttonElement.classList.remove('bg-gray-400');
+                        // Restore original color - this part might not be strictly necessary
+                        // if you don't have general codes to copy.
+                        if (elementId.startsWith('productCode')) { 
+                            buttonElement.classList.add('bg-red-500');
+                        } else { 
+                            if (elementId === 'generalCode1') buttonElement.classList.add('bg-blue-500');
+                            if (elementId === 'generalCode2') buttonElement.classList.add('bg-green-500');
+                        }
+                    }, 1500);
+                }).catch(err => {
+                    console.error('Không thể sao chép mã: ', err);
+                });
+            }
+            window.copyCode = copyCode; // Make function accessible globally from inline onclick
+
+            // --- Product Data with Discount Codes ---
+            // You should replace this with your actual product data.
+            // Add a `discountPrice` and `discountCode` property to products that have discounts.
+            const productsWithDiscount = [
+                { 
+                    id: 'sp1', 
+                    name: 'ÁO THUN “ LÁ CỜ ” BOXY', 
+                    originalPrice: 140000, 
+                    discountPrice: 112000, // 20% off
+                    discountCode: 'SALE20LACO',
+                    image: '../../images/fe3e9d70-860b-493c-994e-81dd0a2cce3d_ea7474154e06472dae3268ee223c50a3_master.jpg' 
+                },
+                { 
+                    id: 'sp2', 
+                    name: 'Áo heyou màu xanh', 
+                    originalPrice: 120000, 
+                    discountPrice: 96000, // 20% off
+                    discountCode: 'HEYOUTECH20',
+                    image: '../../images/download.png' 
+                },
+                { 
+                    id: 'sp3', 
+                    name: 'ÁO THUN “ LOLLIPOP SKULL', 
+                    originalPrice: 159000, 
+                    discountPrice: 127200, // 20% off
+                    discountCode: 'SKULL20',
+                    image: '../../images/Image (9).png' 
+                },
+                { 
+                    id: 'sp4', 
+                    name: 'Áo heyou Tokyo', 
+                    originalPrice: 170000, 
+                    discountPrice: 136000, // 20% off
+                    discountCode: 'TOKYOSALE20',
+                    image: '../../images/Image (10).png' 
+                },
+                { 
+                    id: 'sp5', 
+                    name: 'ÁO THUN “GINGHAM CAKE”', 
+                    originalPrice: 134000, 
+                    discountPrice: 107200, // 20% off
+                    discountCode: 'CAKESALE20',
+                    image: '../../images/Image (11).png' 
+                },
+                { 
+                    id: 'sp6', 
+                    name: 'HEYYOU burn', 
+                    originalPrice: 190000, 
+                    discountPrice: 152000, // 20% off
+                    discountCode: 'BURN20',
+                    image: '../../images/Image (12).png' 
+                },
+                { 
+                    id: 'sp7', 
+                    name: 'Áo SECRET HYSVIBE', 
+                    originalPrice: 160000, 
+                    discountPrice: 128000, // 20% off
+                    discountCode: 'HYSVIBE20',
+                    image: '../../images/Image (1).png' 
+                },
+                { 
+                    id: 'sp8', 
+                    name: 'Áo HYSVIBE Sketch Skull', 
+                    originalPrice: 150000, 
+                    discountPrice: 120000, // 20% off
+                    discountCode: 'SKETCH20',
+                    image: '../../images/Image.png' 
+                },
+                { 
+                    id: 'sp9', 
+                    name: 'Áo HYSVIBE Food Tour', 
+                    originalPrice: 170000, 
+                    discountPrice: 136000, // 20% off
+                    discountCode: 'FOODTOUR20',
+                    image: '../../images/Image (2).png' 
+                },
+                // Example of a product without a specific discount code (just marked down price)
+                {
+                    id: 'sp10',
+                    name: 'Áo Trắng Basic Logo Mini',
+                    originalPrice: 110000,
+                    discountPrice: 99000, // 10% off, no specific code
+                    discountCode: null, 
+                    image: '../../images/Image (3).png'
+                },
+                { 
+                    id: 'sp11', 
+                    name: 'Áo HEYYOU phối caro', 
+                    originalPrice: 155000, 
+                    discountPrice: 124000, // 20% off
+                    discountCode: 'CARO20',
+                    image: '../../images/Image (5).png' 
+                },
+                { 
+                    id: 'sp13', 
+                    name: 'Áo HOLIDAY Jeep Summer', 
+                    originalPrice: 145000, 
+                    discountPrice: 116000, // 20% off
+                    discountCode: 'JEEP20',
+                    image: '../../images/Image (7).png' 
+                },
+            ];
+
+            const discountedProductListDiv = document.getElementById('discountedProductList');
+
+            function renderDiscountedProducts() {
+                discountedProductListDiv.innerHTML = ''; // Clear previous content
+
+                productsWithDiscount.forEach(product => {
+                    const discountPercentage = product.originalPrice ? Math.round(((product.originalPrice - product.discountPrice) / product.originalPrice) * 100) : 0;
+                    
+                    const productCardHtml = `
+                        <div class="product-card bg-white border rounded p-3 shadow hover:shadow-md transition transform hover:scale-105">
+                            <a href="chitiet.html?id=${product.id}" class="block">
+                                <img src="${product.image}" alt="${product.name}" class="rounded mb-2 w-full h-48 object-cover">
+                                <p class="product-name text-sm text-gray-700 font-medium">${product.name}</p>
+                            </a>
+                            <div class="flex items-baseline justify-between mt-1">
+                                <p class="text-sm font-bold text-red-600">${product.discountPrice.toLocaleString('vi-VN')}đ</p>
+                                ${product.originalPrice ? `<p class="text-xs text-gray-500 line-through ml-2">${product.originalPrice.toLocaleString('vi-VN')}đ</p>` : ''}
+                                ${discountPercentage > 0 ? `<span class="bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-0.5 rounded ml-auto">-${discountPercentage}%</span>` : ''}
+                            </div>
+                            <div class="mt-3 text-center">
+                                <p class="text-xs text-gray-500 mb-1">Đã áp dụng giảm giá trực tiếp!</p>
+                            </div>
+                            <button class="mt-4 w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition duration-200 text-sm">Thêm vào giỏ</button>
+                        </div>
+                    `;
+                    discountedProductListDiv.insertAdjacentHTML('beforeend', productCardHtml);
+                });
+
+                   // Add event listeners for "Add to Cart" buttons dynamically
+                document.querySelectorAll('.product-card button.bg-black').forEach(button => {
+                    button.addEventListener('click', function(event) {
+                        event.preventDefault(); // Prevent default button action if any
+                        const productId = this.closest('.product-card').querySelector('a').href.split('id=')[1];
+                        const product = productsWithDiscount.find(p => p.id === productId);
+                        if (product) {
+                            addToCart(product);
+                            alert(`Đã thêm "${product.name}" vào giỏ hàng!`);
+                        }
+                    });
+                });
+            }
+
+            // Dummy addToCart function (replace with your actual cart logic)
+            function addToCart(product) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const existingItemIndex = cart.findIndex(item => item.id === product.id);
+
+                if (existingItemIndex > -1) {
+                    cart[existingItemIndex].quantity += 1;
+                } else {
+                    cart.push({ 
+                        id: product.id, 
+                        name: product.name, 
+                        price: product.discountPrice, // Use discounted price
+                        image: product.image,
+                        quantity: 1 
+                    });
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount(); // Update cart count in header
+            }
+
+
+            renderDiscountedProducts(); // Initial render of products
+        });
+    </script>
+
+</body>
+</html>

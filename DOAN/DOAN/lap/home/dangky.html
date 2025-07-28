@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký tài khoản - Thời trang xu hướng</title> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-white shadow fixed w-full z-50"> <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="../../lap/home/home.html" class="flex items-center gap-2 hover:scale-105 transition">
+        <img src="../../images/v115_2498.jpg" alt="Logo" class="w-12 h-12">
+        <span class="font-semibold text-sm hidden sm:inline">Thời trang xu hướng</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <nav class="flex gap-6 text-sm">
+          <a href="../../lap/home/home.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Trang chủ</a>
+          <a href="../../lap/home/sanpham.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Sản phẩm</a>
+          <a href="../../lap/home/bosanphammoi.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Bộ sưu tập mới</a>
+          <a href="../../lap/home/uudai.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Ưu đãi</a>
+          <a href="../../lap/home/lienhe.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Liên hệ</a>
+          <a href="../../lap/home/giohang.html" class="text-xl transition duration-200 hover:text-black transform hover:scale-110 relative">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+          </a>
+        </nav>
+        <div id="login-section" class="flex gap-2"> 
+          <a href="dangnhap.html" class="text-sm border px-3 py-1 rounded transition duration-200 hover:bg-gray-200">Đăng nhập</a>
+          <a href="dangky.html" class="text-sm bg-black text-white px-3 py-1 rounded transition duration-200 transform hover:scale-105 hover:bg-gray-800">Đăng ký</a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 md:hidden">
+        <a href="../../lap/home/giohang.html" class="text-xl transition duration-200 hover:text-black transform hover:scale-110 relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count-mobile" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+        </a>
+        <button id="mobile-menu-btn" class="text-2xl hover:text-gray-600 transition duration-200">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+    
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+      <div class="flex items-center justify-between p-4 border-b">
+        <h3 class="text-lg font-semibold">Menu</h3>
+        <button id="close-menu-btn" class="text-2xl hover:text-gray-600 transition duration-200">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      
+      <nav class="p-4">
+        <ul class="space-y-4">
+          <li>
+            <a href="../../lap/home/home.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+              <i class="fa-solid fa-home w-5"></i>
+              <span>Trang chủ</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../lap/home/sanpham.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+              <i class="fa-solid fa-shirt w-5"></i>
+              <span>Sản phẩm</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../lap/home/bosanphammoi.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+              <i class="fa-solid fa-star w-5"></i>
+              <span>Bộ sưu tập mới</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../lap/home/uudai.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+              <i class="fa-solid fa-tag w-5"></i>
+              <span>Ưu đãi</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../lap/home/lienhe.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+              <i class="fa-solid fa-phone w-5"></i>
+              <span>Liên hệ</span>
+            </a>
+          </li>
+        </ul>
+        
+        <div id="mobile-login-section" class="mt-8 space-y-3">
+          <a href="dangnhap.html" class="block text-center py-3 px-4 border rounded-lg hover:bg-gray-100 transition duration-200">
+            Đăng nhập
+          </a>
+          <a href="dangky.html" class="block text-center py-3 px-4 bg-black text-white rounded-lg hover:bg-gray-800 transition duration-200">
+            Đăng ký
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="min-h-screen flex items-center justify-center pt-20"> 
+    <div class="grid grid-cols-1 md:grid-cols-2 w-full max-w-6xl bg-white rounded-lg overflow-hidden shadow-lg">
+      
+      <div class="p-8 border-r">
+        <h2 class="text-2xl font-bold mb-6">Đăng ký tài khoản</h2>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium">Tên</label>
+            <input type="text" name="name" placeholder="Nhập tên"
+              class="mt-1 w-full border border-gray-300 rounded px-3 py-2 text-sm" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Email</label>
+            <input type="email" name="email" placeholder="Nhập email"
+              class="mt-1 w-full border border-gray-300 rounded px-3 py-2 text-sm" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Mật khẩu</label>
+            <input type="password" name="password" placeholder="********"
+              class="mt-1 w-full border border-gray-300 rounded px-3 py-2 text-sm" required>
+          </div>
+          <div class="flex items-center text-sm">
+            <input type="checkbox" class="mr-2" required>
+            <label>Đồng ý với <span class="font-semibold">Điều khoản & Chính sách</span></label>
+          </div>
+          <button type="submit" class="w-full bg-black text-white py-2 rounded text-sm hover:bg-gray-800 transition duration-200">Đăng ký</button>
+        </form>
+
+        <p class="mt-6 text-center text-sm">Đã có tài khoản?
+          <a href="dangnhap.html" class="text-blue-600 font-medium hover:underline">Đăng nhập</a>
+        </p>
+      </div>
+
+      <div class="hidden md:block">
+        <img src="../../images/v115_2504.jpg" alt="Fashion" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+      const closeMenuBtn = document.getElementById('close-menu-btn');
+
+      function openMobileMenu() {
+        if (mobileMenu) mobileMenu.classList.remove('translate-x-full');
+        if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling of the main page when menu is open
+      }
+
+      function closeMobileMenu() {
+        if (mobileMenu) mobileMenu.classList.add('translate-x-full');
+        if (mobileMenuOverlay) mobileMenuOverlay.classList.add('hidden');
+        document.body.style.overflow = ''; // Allow scrolling again
+      }
+
+      if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+      if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMobileMenu);
+      if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+      // Close menu when clicking on menu items
+      if (mobileMenu) {
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+        });
+      }
+
+      // --- Logic xử lý đăng nhập/đăng xuất và giỏ hàng ---
+      const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+      const loginSection = document.querySelector("#login-section"); 
+      const mobileLoginSection = document.querySelector("#mobile-login-section"); 
+
+      if (loggedInUser && loginSection) {
+        loginSection.innerHTML = `
+          <div class="text-sm flex items-center gap-3">
+            <span class="text-gray-700">Xin chào, <strong>${loggedInUser.name}</strong></span>
+            <button id="logoutBtn" class="text-xs text-red-500 hover:underline">Đăng xuất</button>
+          </div>
+        `;
+
+        const logoutBtn = document.getElementById("logoutBtn");
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", () => {
+            localStorage.removeItem("loggedInUser");
+            // Điều chỉnh đường dẫn tương đối để trở về trang đăng nhập
+            window.location.href = "dangnhap.html"; 
+          });
+        }
+      }
+
+      if (loggedInUser && mobileLoginSection) {
+        mobileLoginSection.innerHTML = `
+            <div class="mt-8 space-y-3">
+              <span class="block text-center py-3 px-4 rounded-lg bg-gray-100 text-gray-700">Xin chào, <strong>${loggedInUser.name}</strong></span>
+              <button id="mobileLogoutBtn" class="block w-full text-center py-3 px-4 bg-black text-white rounded-lg hover:bg-gray-800 transition duration-200">Đăng xuất</button>
+            </div>
+          `;
+          const mobileLogoutBtn = document.getElementById("mobileLogoutBtn");
+          if (mobileLogoutBtn) {
+            mobileLogoutBtn.addEventListener("click", () => {
+              localStorage.removeItem("loggedInUser");
+              // Điều chỉnh đường dẫn tương đối để trở về trang đăng nhập
+              window.location.href = "dangnhap.html"; 
+            });
+          }
+      }
+
+      // Hàm cập nhật số lượng sản phẩm trong giỏ hàng
+      function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartCountElement = document.getElementById('cart-count');
+        const cartCountMobileElement = document.getElementById('cart-count-mobile');
+        
+        if (cart.length > 0) {
+          const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+          if (cartCountElement) { 
+            cartCountElement.textContent = totalItems;
+            cartCountElement.classList.remove('hidden');
+          }
+          if (cartCountMobileElement) { 
+            cartCountMobileElement.textContent = totalItems;
+            cartCountMobileElement.classList.remove('hidden');
+          }
+        } else {
+          if (cartCountElement) cartCountElement.classList.add('hidden');
+          if (cartCountMobileElement) cartCountMobileElement.classList.add('hidden');
+        }
+      }
+
+      // Cập nhật số đếm giỏ hàng khi tải trang
+      updateCartCount();
+
+      // Logic đăng ký tài khoản
+      const registerForm = document.querySelector("form");
+      if (registerForm) { // Kiểm tra form tồn tại trước khi thêm event listener
+        registerForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.querySelector('input[name="name"]').value;
+          const email = document.querySelector('input[name="email"]').value;
+          const password = document.querySelector('input[name="password"]').value;
+
+          // Kiểm tra xem email đã tồn tại chưa
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+          const userExists = users.some(user => user.email === email);
+
+          if (userExists) {
+            alert("Email này đã được đăng ký. Vui lòng sử dụng email khác hoặc đăng nhập.");
+          } else {
+            // Thêm người dùng mới vào mảng users
+            users.push({ name, email, password });
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Đăng ký thành công! Vui lòng đăng nhập.");
+            // Chuyển sang trang đăng nhập
+            window.location.href = "dangnhap.html";
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

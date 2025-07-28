@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bộ sưu tập mới - Thời trang xu hướng</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-white shadow fixed w-full z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="../../lap/home/home.html" class="flex items-center gap-2 hover:scale-105 transition">
+        <img src="../../images/v115_2498.jpg" alt="Logo" class="w-12 h-12">
+        <span class="font-semibold text-sm hidden sm:inline">Thời trang xu hướng</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <nav class="flex gap-6 text-sm">
+          <a href="../../lap/home/home.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Trang chủ</a>
+          <a href="../../lap/home/sanpham.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Sản phẩm</a>
+          <a href="../../lap/home/bosanphammoi.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Bộ sưu tập mới</a>
+          <a href="../../lap/home/uudai.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Ưu đãi</a>
+          <a href="../../lap/home/lienhe.html" class="hover:underline transition duration-200 hover:text-black transform hover:scale-105">Liên hệ</a>
+          <a href="../../lap/home/giohang.html" class="text-xl transition duration-200 hover:text-black transform hover:scale-110 relative">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+          </a>
+        </nav>
+        <div id="login-section" class="flex gap-2">
+          <a href="dangnhap.html" class="text-sm border px-3 py-1 rounded transition duration-200 hover:bg-gray-200">Đăng nhập</a>
+          <a href="dangky.html" class="text-sm bg-black text-white px-3 py-1 rounded transition duration-200 transform hover:scale-105 hover:bg-gray-800">Đăng ký</a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 md:hidden">
+        <a href="../../lap/home/giohang.html" class="text-xl transition duration-200 hover:text-black transform hover:scale-110 relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count-mobile" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+        </a>
+        <button id="mobile-menu-btn" class="text-2xl hover:text-gray-600 transition duration-200">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+    
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+      <div class="flex items-center justify-between p-4 border-b">
+        <h3 class="text-lg font-semibold">Menu</h3>
+        <button id="close-menu-btn" class="text-2xl hover:text-gray-600 transition duration-200">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      
+      <nav class="p-4">
+        <ul class="space-y-4">
+          <li>
+            <a href="../../lap/home/home.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+              <i class="fa-solid fa-home w-5"></i>
+              <span>Trang chủ</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../lap/home/sanpham.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+              <i class="fa-solid fa-shirt w-5"></i>
+              <span>Sản phẩm</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../lap/home/bosanphammoi.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3 bg-gray-50">
+              <i class="fa-solid fa-star w-5"></i>
+              <span>Bộ sưu tập mới</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../lap/home/uudai.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+              <i class="fa-solid fa-tag w-5"></i>
+              <span>Ưu đãi</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../lap/home/lienhe.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center gap-3">
+              <i class="fa-solid fa-phone w-5"></i>
+              <span>Liên hệ</span>
+            </a>
+          </li>
+        </ul>
+        
+        <div id="mobile-login-section" class="mt-8 space-y-3">
+          <a href="dangnhap.html" class="block text-center py-3 px-4 border rounded-lg hover:bg-gray-100 transition duration-200">
+            Đăng nhập
+          </a>
+          <a href="dangky.html" class="block text-center py-3 px-4 bg-black text-white rounded-lg hover:bg-gray-800 transition duration-200">
+            Đăng ký
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto pt-28 pb-12 px-4">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Bộ Sưu Tập Mới</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto">Khám phá những thiết kế độc đáo và xu hướng thời trang mới nhất trong bộ sưu tập đặc biệt của chúng tôi</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div class="group bg-white rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+        <a href="chitiet.html?id=sp7" class="block">
+          <div class="relative overflow-hidden rounded-t-lg">
+            <img src="../../images/Image (1).png" alt="Áo SECRET HYSVIBE" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition duration-300"></div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 group-hover:text-gray-800">Áo SECRET HYSVIBE</h3>
+            <p class="text-sm text-gray-600 mb-2">Phong cách bí ẩn, phù hợp đi chơi</p>
+            <p class="text-xl font-bold text-red-600">160,000đ</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="group bg-white rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+        <a href="chitiet.html?id=sp8" class="block">
+          <div class="relative overflow-hidden rounded-t-lg">
+            <img src="../../images/Image.png" alt="Áo HYSVIBE Sketch Skull" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition duration-300"></div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 group-hover:text-gray-800">Áo HYSVIBE Sketch Skull</h3>
+            <p class="text-sm text-gray-600 mb-2">Hình in đầu lâu phác thảo ấn tượng</p>
+            <p class="text-xl font-bold text-red-600">150,000đ</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="group bg-white rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+        <a href="chitiet.html?id=sp9" class="block">
+          <div class="relative overflow-hidden rounded-t-lg">
+            <img src="../../images/Image (2).png" alt="Áo HYSVIBE Food Tour" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition duration-300"></div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 group-hover:text-gray-800">Áo HYSVIBE Food Tour</h3>
+            <p class="text-sm text-gray-600 mb-2">Chủ đề ẩm thực thú vị, bắt mắt</p>
+            <p class="text-xl font-bold text-red-600">170,000đ</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="group bg-white rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+        <a href="chitiet.html?id=sp10" class="block">
+          <div class="relative overflow-hidden rounded-t-lg">
+            <img src="../../images/Image (3).png" alt="Áo Trắng Basic Logo Mini" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition duration-300"></div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 group-hover:text-gray-800">Áo Trắng Basic Logo Mini</h3>
+            <p class="text-sm text-gray-600 mb-2">Thiết kế đơn giản, logo nhỏ tinh tế</p>
+            <p class="text-xl font-bold text-red-600">110,000đ</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="group bg-white rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+        <a href="chitiet.html?id=sp3" class="block">
+          <div class="relative overflow-hidden rounded-t-lg">
+            <img src="../../images/Image (4).png" alt="ÁO THUN LOLLIPOP SKULL" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition duration-300"></div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 group-hover:text-gray-800">ÁO THUN LOLLIPOP SKULL</h3>
+            <p class="text-sm text-gray-600 mb-2">Hình in nổi bật, cá tính cho giới trẻ</p>
+            <p class="text-xl font-bold text-red-600">159,000đ</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="group bg-white rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+        <a href="chitiet.html?id=sp11" class="block">
+          <div class="relative overflow-hidden rounded-t-lg">
+            <img src="../../images/Image (5).png" alt="Áo HEYYOU phối caro" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition duration-300"></div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 group-hover:text-gray-800">Áo HEYYOU phối caro</h3>
+            <p class="text-sm text-gray-600 mb-2">Thiết kế caro trẻ trung, phá cách</p>
+            <p class="text-xl font-bold text-red-600">155,000đ</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="group bg-white rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+        <a href="chitiet.html?id=sp12" class="block">
+          <div class="relative overflow-hidden rounded-t-lg">
+            <img src="../../images/Image (6).png" alt="Gói Sticker Pack HEYYOU" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition duration-300"></div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 group-hover:text-gray-800">Gói Sticker Pack HEYYOU</h3>
+            <p class="text-sm text-gray-600 mb-2">Sticker dán đa dạng chủ đề thời trang</p>
+            <p class="text-xl font-bold text-red-600">60,000đ</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="group bg-white rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+        <a href="chitiet.html?id=sp13" class="block">
+          <div class="relative overflow-hidden rounded-t-lg">
+            <img src="../../images/Image (7).png" alt="Áo HOLIDAY Jeep Summer" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition duration-300"></div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 group-hover:text-gray-800">Áo HOLIDAY Jeep Summer</h3>
+            <p class="text-sm text-gray-600 mb-2">Chủ đề xe Jeep mùa hè, trẻ trung</p>
+            <p class="text-xl font-bold text-red-600">145,000đ</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+
+<footer class="bg-white border-t mt-12 py-8">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm text-gray-600 items-start">
+    
+    <div class="hidden md:flex flex-row items-center gap-4"> 
+      <a href="#" id="footer-logo" class="block hover:scale-105 transition duration-300">
+        <img src="../../images/v115_2498.jpg" alt="Logo Footer" class="w-8 h-8 rounded-full"> 
+      </a>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-x-twitter fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-linkedin fa-lg"></i></a>
+      </div>
+    </div>
+
+    <div class="flex flex-row items-center pt-1 gap-4 md:hidden"> 
+      <a href="#" id="footer-logo-mobile" class="block hover:scale-105 transition duration-300">
+        <img src="../../images/v115_2498.jpg" alt="Logo Footer Mobile" class="w-8 h-8 rounded-full"> 
+      </a>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-x-twitter fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="#" class="hover:text-black transform hover:scale-110 transition duration-300"><i class="fab fa-linkedin fa-lg"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="text-base font-bold text-black mb-2">Use cases</p>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-black transition duration-200">Thời trang nam</a></li>
+        <li><a href="#" class="hover:text-black transition duration-200">Thời trang nữ</a></li>
+        <li><a href="#" class="hover:text-black transition duration-200">Phụ kiện</a></li>
+        <li><a href="uudai.html" class="hover:text-black transition duration-200">Ưu đãi</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-base font-bold text-black mb-2">Explore</p>
+      <ul class="space-y-1">
+        <li><a href="bosanphammoi.html" class="hover:text-black transition duration-200">Bộ sưu tập mới</a></li>
+        <li><a href="sanpham.html" class="hover:text-black transition duration-200">Sản phẩm bán chạy</a></li>
+        <li><a href="giohang.html" class="hover:text-black transition duration-200">Giỏ hàng</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-base font-bold text-black mb-2">Resources</p>
+      <ul class="space-y-1">
+        <li><a href="#" class="hover:text-black transition duration-200">Chính sách mua hàng</a></li>
+        <li><a href="#" class="hover:text-black transition duration-200">Hỗ trợ khách hàng</a></li>
+        <li><a href="lienhe.html" class="hover:text-black transition duration-200">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-6 text-center text-xs text-gray-400">
+    &copy; 2025 Thời trang xu hướng. All rights reserved.
+  </div>
+</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+      const closeMenuBtn = document.getElementById('close-menu-btn');
+
+      function openMobileMenu() {
+        if (mobileMenu) mobileMenu.classList.remove('translate-x-full');
+        if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling of the main page when menu is open
+      }
+
+      function closeMobileMenu() {
+        if (mobileMenu) mobileMenu.classList.add('translate-x-full');
+        if (mobileMenuOverlay) mobileMenuOverlay.classList.add('hidden');
+        document.body.style.overflow = ''; // Allow scrolling again
+      }
+
+      if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+      if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMobileMenu);
+      if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+      // Close menu when clicking on menu items
+      if (mobileMenu) {
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+        });
+      }
+
+      // --- Logic xử lý đăng nhập/đăng xuất và giỏ hàng ---
+      const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+      const loginSection = document.querySelector("#login-section"); 
+      const mobileLoginSection = document.querySelector("#mobile-login-section"); 
+
+      if (loggedInUser && loginSection) {
+        loginSection.innerHTML = `
+          <div class="text-sm flex items-center gap-3">
+            <span class="text-gray-700">Xin chào, <strong>${loggedInUser.name}</strong></span>
+            <button id="logoutBtn" class="text-xs text-red-500 hover:underline">Đăng xuất</button>
+          </div>
+        `;
+
+        const logoutBtn = document.getElementById("logoutBtn");
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", () => {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "dangnhap.html"; 
+          });
+        }
+      }
+
+      if (loggedInUser && mobileLoginSection) {
+        mobileLoginSection.innerHTML = `
+            <div class="mt-8 space-y-3">
+              <span class="block text-center py-3 px-4 rounded-lg bg-gray-100 text-gray-700">Xin chào, <strong>${loggedInUser.name}</strong></span>
+              <button id="mobileLogoutBtn" class="block w-full text-center py-3 px-4 bg-black text-white rounded-lg hover:bg-gray-800 transition duration-200">Đăng xuất</button>
+            </div>
+          `;
+          const mobileLogoutBtn = document.getElementById("mobileLogoutBtn");
+          if (mobileLogoutBtn) {
+            mobileLogoutBtn.addEventListener("click", () => {
+              localStorage.removeItem("loggedInUser");
+              window.location.href = "dangnhap.html"; 
+            });
+          }
+      }
+
+      // Cập nhật số lượng sản phẩm trong giỏ hàng trên biểu tượng
+      function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartCountElement = document.getElementById('cart-count');
+        const cartCountMobileElement = document.getElementById('cart-count-mobile');
+        
+        if (cart.length > 0) {
+          const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+          if (cartCountElement) { 
+            cartCountElement.textContent = totalItems;
+            cartCountElement.classList.remove('hidden');
+          }
+          if (cartCountMobileElement) { 
+            cartCountMobileElement.textContent = totalItems;
+            cartCountMobileElement.classList.remove('hidden');
+          }
+        } else {
+          if (cartCountElement) cartCountElement.classList.add('hidden');
+          if (cartCountMobileElement) cartCountMobileElement.classList.add('hidden');
+        }
+      }
+      updateCartCount(); // Call when DOMContentLoaded
+
+      // Cập nhật href của logo footer về trang hiện tại
+      const footerLogo = document.getElementById('footer-logo');
+      if (footerLogo) {
+        footerLogo.href = window.location.href;
+      }
+    });
+  </script>
+</body>
+</html>
